@@ -18,5 +18,23 @@ describe "The face of the moon", :type => :feature do
     visit "http://www.moogle.com"
     visit "http://youtube.com"
     visit "http://tooneyd.tumblr.com/post/112763203403/basedthursday-sean3116-beesmygod-krudman"
+    visit "https://github.com/divmain/GitSavvy"
+    visit "https://www.rememberthemilk.com/home"
+    visit "http://www.webex.com"
+    visit "http://www.saucelabs.com"
+  end
+
+  it "goes other places" do
+    visit "https://rubygems.org"
+    visit "http://beta.cashdeck.com.au"
+    visit "http://www.reddit.com"
+    visit "http://altavista.com"
+    visit "http://www.moogle.com"
+    visit "http://youtube.com"
+    visit "http://tooneyd.tumblr.com/post/112763203403/basedthursday-sean3116-beesmygod-krudman"
+    visit "https://github.com/divmain/GitSavvy"
+    visit "https://www.rememberthemilk.com/home"
+    visit "http://www.webex.com"
+    visit "http://www.saucelabs.com"
   end
 end
