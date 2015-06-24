@@ -9,4 +9,8 @@ describe "The face of the moon", :type => :feature do
   it "visits narrow design" do
     visit "http://www.narrowdesign.com/"
   end
+
+  it "goes elsewhere" do
+    visit "https://rubygems.org"
+  end
 end
