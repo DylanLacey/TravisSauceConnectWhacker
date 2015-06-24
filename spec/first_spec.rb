@@ -12,5 +12,11 @@ describe "The face of the moon", :type => :feature do
 
   it "goes elsewhere" do
     visit "https://rubygems.org"
+    visit "http://beta.cashdeck.com.au"
+    visit "http://www.reddit.com"
+    visit "http://altavista.com"
+    visit "http://www.moogle.com"
+    visit "http://youtube.com"
+    visit "http://tooneyd.tumblr.com/post/112763203403/basedthursday-sean3116-beesmygod-krudman"
   end
 end
