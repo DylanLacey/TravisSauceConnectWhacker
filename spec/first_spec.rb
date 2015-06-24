@@ -46,4 +46,10 @@ describe "The face of the moon", :type => :feature do
   it "tries to mess with caches" do
     sites.shuffle.each {|site| visit site}
   end
+
+  it "tries to mess with caches a lot" do
+    10.times do
+      sites.shuffle.each {|site| visit site}
+    end
+  end
 end
