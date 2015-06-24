@@ -4,6 +4,8 @@ sites = %w{https://rubygems.org http://beta.cashdeck.com.au http://www.reddit.co
           http://www.moogle.com http://www.youtube.com http://www.webex.com http://www.geocities.com
           http://www.saucelabs.com http://www.rememberthemilk.com http://www.bees.com http://www.wikipedia.org         
 }
+require "peach"
+
 
 describe "The face of the moon", :type => :feature do
   it "visits google" do
@@ -50,6 +52,16 @@ describe "The face of the moon", :type => :feature do
   it "tries to mess with caches a lot" do
     10.times do
       sites.shuffle.each {|site| visit site}
+    end
+  end
+
+  it "goes nuts in parallel" do
+    capys = []
+    10.times do 
+      Capybara::Session.new(:sauce)
+    end
+    capys.peach do |capy|
+      sites.shuffle.each {|site| capy.visit site}
     end
   end
 end
