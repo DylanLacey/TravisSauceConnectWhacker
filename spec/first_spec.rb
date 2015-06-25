@@ -58,7 +58,7 @@ describe "The face of the moon", :type => :feature do
   it "goes nuts in parallel" do
     capys = []
     10.times do 
-      Capybara::Session.new(:sauce)
+      capys << Capybara::Session.new(:sauce)
     end
     capys.peach do |capy|
       sites.shuffle.each {|site| capy.visit site}
